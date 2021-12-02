@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val filter = IntentFilter()
         filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
         filter.addAction(Intent.ACTION_POWER_CONNECTED)
+        filter.addAction(Intent.ACTION_POWER_DISCONNECTED)
         filter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION)
         registerReceiver(receiver, filter)
     }
